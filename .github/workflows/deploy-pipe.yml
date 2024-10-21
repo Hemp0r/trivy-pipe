@@ -28,6 +28,6 @@ jobs:
       with:
         context: .
         tags: |
-          aquasec/trivy-pipe:latest 
-          aquasec/trivy-pipe:${{github.ref_name}}
+          hemp0r/bitbucket-trivy-pipe:latest 
+          hemp0r/bitbucket-trivy-pipe:${{github.ref_name}}
         push: true

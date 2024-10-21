@@ -1,6 +1,6 @@
-# Trivy Pipe
+# Trivy Pipe - forked
 
-> [Bitbucket Pipeline](https://bitbucket.org/product/features/pipelines/) for [Trivy](https://github.com/aquasecurity/trivy)
+> Bitbucket Pipeline for [Trivy](https://github.com/aquasecurity/trivy)
 
 ## Usage
 
@@ -16,7 +16,7 @@ pipelines:
         service:
           docker
         script:
-        - pipe: aquasecurity/trivy-pipe:latest
+        - pipe: hemp0r/trivy-pipe:latest
           variables:
             imageRef: 'docker.io/my-organization/my-app:${{ github.sha }}'
             format: 'table'
@@ -39,7 +39,7 @@ pipelines:
         service:
           docker
         script:
-          - pipe: aquasecurity/trivy-pipe:latest
+          - pipe: hemp0r/trivy-pipe:latest
             variables:
               scanType: 'fs'
               ignoreUnfixed: true
@@ -196,5 +196,5 @@ Following inputs can be used as `step.with` keys:
 | `ignorePolicy`  | String  |                                    | Filter vulnerabilities with OPA rego language |
 
 
-[license]: https://github.com/aquasecurity/trivy-pipe/blob/master/LICENSE
-[license-img]: https://img.shields.io/github/license/aquasecurity/trivy-pipe
+[license]: https://github.com/hemp0r/trivy-pipe/blob/master/LICENSE
+[license-img]: https://img.shields.io/github/license/hemp0r/trivy-pipe
